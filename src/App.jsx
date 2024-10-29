@@ -1,8 +1,3 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-import './App.css'
-
 const list = [
   {
     title: 'React',
@@ -36,6 +31,15 @@ function App() {
   );
 }
 
+function Search() {
+  return (
+    <div>
+      <label htmlFor='search'>Search: </label>
+      <input id='search' type='text' />
+    </div>
+  );
+}
+
 function List() {
   return (
     <ul>
@@ -43,7 +47,7 @@ function List() {
         return (
           <li key={item.objectID}>
             <span>
-              <a href={item.url}>{item.title} </a>
+              <a href={item.url}>{item.title}</a>
             </span>
             <span>{item.author}</span>
             <span>{item.num_comments}</span>
@@ -52,15 +56,6 @@ function List() {
         );
       })}
     </ul>
-  );
-}
-
-function Search() {
-  return (
-    <div>
-      <label htmlFor='search'>Search: </label>
-      <input id='search' type='text' />
-    </div>
   );
 }
 
